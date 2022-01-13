@@ -1,12 +1,14 @@
 fn main() {
-    println!("Running cap_permutations(\"ab2\")");
-    println!("{:?}", cap_permutations("ab2"));
+    let test1: Vec<String> = cap_permutations("ab2");
+    let test2: Vec<String> = cap_permutations("35p");
 
-    println!("Running cap_permutations(\"35p\")");
-    println!("{:?}", cap_permutations("35p"));
+    println!("Running test1: cap_permutations(\"ab2\")");
+    println!("{:?}", test1);
+    assert_eq!(test1, vec!["AB2", "aB2", "Ab2", "ab2"]);
 
-    println!("Running cap_permutations(\"6xo9xo\")");
-    println!("{:?}", cap_permutations("6xo9xo"));
+    println!("Running test2: cap_permutations(\"35p\")");
+    println!("{:?}", test2);
+    assert_eq!(test2, vec!["35P", "35p"]);
 }
 
 fn cap_permutations(s: &str) -> Vec<String> {
