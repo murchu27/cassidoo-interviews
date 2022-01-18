@@ -1,10 +1,14 @@
 fn main() {
     let soln: &str = "fudge";
-    let guess1: String = wordleGuess("reads", soln);
-    println!("{}", guess1);
+    println!("[Psst! The solution is \"{}\"!]", soln);
 
-    let guess2: String = wordleGuess("lodge", soln);
-    println!("{}", guess2);
+    let guess1: &str = "reads";
+    let guess1_result: String = wordleGuess(guess1, soln);
+    println!("You guessed:\n{}\n{}", guess1, guess1_result);
+
+    let guess2: &str = "lodge";
+    let guess2_result: String = wordleGuess(guess2, soln);
+    println!("You guessed:\n{}\n{}", guess2, guess2_result);
 }
 
 #[allow(non_snake_case)]
